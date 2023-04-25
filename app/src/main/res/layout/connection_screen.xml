@@ -22,7 +22,7 @@
         tools:ignore="TextContrastCheck,TextSizeCheck,VisualLintBounds" />
 
     <TextView
-        android:id="@+id/TitleSecCodeSend"
+        android:id="@+id/TitleInscriptionJS"
         android:layout_width="342dp"
         android:layout_height="77dp"
         android:layout_marginTop="12dp"
@@ -50,7 +50,7 @@
         tools:ignore="VisualLintButtonSize,TextContrastCheck" />
 
     <Button
-        android:id="@+id/ValidateSecCodeSend"
+        android:id="@+id/SignUpInscriptionJS"
         style="@style/Widget.Material3.Button.TextButton.Snackbar"
         android:layout_width="349dp"
         android:layout_height="48dp"
@@ -114,12 +114,12 @@
         android:textColorHint="#999999"
         android:textSize="20sp"
         android:typeface="normal"
-        app:layout_constraintBottom_toTopOf="@+id/ValidateSecCodeSend"
+        app:layout_constraintBottom_toTopOf="@+id/SignUpInscriptionJS"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/CodeSecCodSend"
+        android:id="@+id/InputSecCodeSend"
         style="@style/Widget.AppCompat.EditText"
         android:layout_width="341dp"
         android:layout_height="52dp"

@@ -36,7 +36,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ValidateSecCodeSend"
+        app:layout_constraintTop_toBottomOf="@+id/SignUpInscriptionJS"
         tools:ignore="TextSizeCheck,TextContrastCheck" />
 
     <TextView
@@ -52,14 +52,14 @@
         android:textColor="#A576DD"
         android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/CodeSecCodSend"
+        app:layout_constraintBottom_toTopOf="@+id/InputSecCodeSend"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TextContrastCheck,TextSizeCheck,VisualLintBounds" />
 
     <TextView
-        android:id="@+id/TitleSecCodeSend"
+        android:id="@+id/TitleInscriptionJS"
         android:layout_width="411dp"
         android:layout_height="84dp"
         android:layout_marginTop="65dp"
@@ -91,7 +91,7 @@
         tools:ignore="VisualLintButtonSize,TextContrastCheck" />
 
     <Button
-        android:id="@+id/ValidateSecCodeSend"
+        android:id="@+id/SignUpInscriptionJS"
         style="@style/Widget.Material3.Button.TextButton.Snackbar"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -107,7 +107,7 @@
         app:layout_constraintBottom_toTopOf="@+id/NocodeSecCodeSend"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CodeSecCodSend"
+        app:layout_constraintTop_toBottomOf="@+id/InputSecCodeSend"
         tools:ignore="VisualLintButtonSize,TextContrastCheck" />
 
     <TextView
@@ -119,14 +119,14 @@
         android:textAlignment="center"
         android:textColor="#AFAFAF"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/CodeSecCodSend"
+        app:layout_constraintBottom_toTopOf="@+id/InputSecCodeSend"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TextSizeCheck,TextContrastCheck" />
 
     <EditText
-        android:id="@+id/CodeSecCodSend"
+        android:id="@+id/InputSecCodeSend"
         style="@style/Widget.AppCompat.EditText"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -143,7 +143,7 @@
         android:textColorHint="#999999"
         android:textSize="20sp"
         android:typeface="normal"
-        app:layout_constraintBottom_toTopOf="@+id/ValidateSecCodeSend"
+        app:layout_constraintBottom_toTopOf="@+id/SignUpInscriptionJS"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/AppTitle" />
