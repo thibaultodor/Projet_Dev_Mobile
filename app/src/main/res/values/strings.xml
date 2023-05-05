@@ -17,11 +17,23 @@
     <string name="email">Email</string>
     <string name="ville">Ville</string>
     <string name="importer_un_cv">Importer un CV</string>
-    <string name="commentaires">Commentaires
-    </string>
+    <string name="commentaires">Commentaires</string>
     <string name="code_de_securite">Code de sécurité</string>
     <string name="text_sec_code_send">Vous allez recevoir un code de vérification par <b>mail</b> et/ou par <b>SMS</b></string>
     <string name="valider">Valider</string>
     <string name="no_sec_cod">Vous n\'avez pas reçu de <b>code</b> ?</string>
     <string name="renvoyer_code">Renvoyer</string>
+    <string name="title_activity_home">Home</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="accueil">Accueil</string>
+    <string name="profil">Profil</string>
+    <string name="settings">Paramètres</string>
 </resources>
