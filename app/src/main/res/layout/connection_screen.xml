@@ -35,7 +35,7 @@
         tools:ignore="TextSizeCheck,TextContrastCheck" />
 
     <Button
-        android:id="@+id/ReturnSecCodeSend"
+        android:id="@+id/retourOffre_connexion"
         style="@style/Widget.Material3.Button.TextButton.Snackbar"
         android:layout_width="349dp"
         android:layout_height="48dp"
@@ -50,7 +50,7 @@
         tools:ignore="VisualLintButtonSize,TextContrastCheck" />
 
     <Button
-        android:id="@+id/ValidateSecCodeSend"
+        android:id="@+id/connexion_button"
         style="@style/Widget.Material3.Button.TextButton.Snackbar"
         android:layout_width="349dp"
         android:layout_height="48dp"
@@ -67,7 +67,7 @@
         tools:ignore="VisualLintButtonSize,TextContrastCheck" />
 
     <Button
-        android:id="@+id/SignUpConnexionScreen"
+        android:id="@+id/inscription_button_connexion"
         android:layout_width="165dp"
         android:layout_height="50dp"
         android:layout_marginBottom="44dp"
@@ -78,7 +78,7 @@
         android:textAllCaps="false"
         android:textColor="#A576DD"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/ReturnSecCodeSend"
+        app:layout_constraintBottom_toTopOf="@+id/retourOffre_connexion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -92,7 +92,7 @@
         android:text="@string/pas_encore_de_compte"
         android:textAlignment="center"
         android:textColor="#AFAFAF"
-        app:layout_constraintBottom_toTopOf="@+id/SignUpConnexionScreen"
+        app:layout_constraintBottom_toTopOf="@+id/inscription_button_connexion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -114,12 +114,12 @@
         android:textColorHint="#999999"
         android:textSize="20sp"
         android:typeface="normal"
-        app:layout_constraintBottom_toTopOf="@+id/ValidateSecCodeSend"
+        app:layout_constraintBottom_toTopOf="@+id/connexion_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/CodeSecCodSend"
+        android:id="@+id/nom"
         style="@style/Widget.AppCompat.EditText"
         android:layout_width="341dp"
         android:layout_height="52dp"
@@ -130,7 +130,7 @@
         android:hint="@string/login"
         android:importantForAutofill="no"
         android:inputType="text"
-        android:textAlignment="textStart"
+        android:textAlignment="viewStart"
         android:textColorHint="#999999"
         android:textSize="20sp"
         android:typeface="normal"
