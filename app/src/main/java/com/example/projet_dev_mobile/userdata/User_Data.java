@@ -7,13 +7,13 @@ import java.util.Date;
 public class User_Data implements Parcelable {
     private String nom;
     private String prenom;
-    private Date dateNaissance;
+    private String dateNaissance;
     private String nationalite;
-    private int numTelephone;
+    private String numTelephone;
     private String email;
     private String ville;
 
-    public User_Data(String nom, String prenom, Date dateNaissance, String nationalite, int numTelephone, String email, String ville) {
+    public User_Data(String nom, String prenom, String dateNaissance, String nationalite, String numTelephone, String email, String ville) {
         this.nom = nom;
         this.prenom = prenom;
         this.dateNaissance = dateNaissance;
@@ -26,8 +26,9 @@ public class User_Data implements Parcelable {
     protected User_Data(Parcel in) {
         nom = in.readString();
         prenom = in.readString();
+        dateNaissance = in.readString();
         nationalite = in.readString();
-        numTelephone = in.readInt();
+        numTelephone = in.readString();
         email = in.readString();
         ville = in.readString();
     }
@@ -36,8 +37,9 @@ public class User_Data implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(nom);
         dest.writeString(prenom);
+        dest.writeString(dateNaissance);
         dest.writeString(nationalite);
-        dest.writeInt(numTelephone);
+        dest.writeString(numTelephone);
         dest.writeString(email);
         dest.writeString(ville);
     }

@@ -18,12 +18,12 @@
             android:theme="@style/Theme.Projet_Dev_Mobile.NoActionBar">
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".InscriptionJobSearcher"
             android:exported="true"
             android:theme="@style/Theme.Projet_Dev_Mobile.NoActionBar">
         </activity>
         <activity
-            android:name=".InscriptionJobSearcher"
+            android:name=".SecurityCodeSend"
             android:exported="true"
             android:theme="@style/Theme.Projet_Dev_Mobile.NoActionBar">
         </activity>
