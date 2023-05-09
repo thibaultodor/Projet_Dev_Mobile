@@ -2,9 +2,7 @@ package com.example.projet_dev_mobile.userdata;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.util.Date;
-
-public class User_Data implements Parcelable {
+public class User_Data_Candidat implements Parcelable {
     private String nom;
     private String prenom;
     private String dateNaissance;
@@ -13,7 +11,7 @@ public class User_Data implements Parcelable {
     private String email;
     private String ville;
 
-    public User_Data(String nom, String prenom, String dateNaissance, String nationalite, String numTelephone, String email, String ville) {
+    public User_Data_Candidat(String nom, String prenom, String dateNaissance, String nationalite, String numTelephone, String email, String ville) {
         this.nom = nom;
         this.prenom = prenom;
         this.dateNaissance = dateNaissance;
@@ -23,7 +21,7 @@ public class User_Data implements Parcelable {
         this.ville = ville;
     }
 
-    protected User_Data(Parcel in) {
+    protected User_Data_Candidat(Parcel in) {
         nom = in.readString();
         prenom = in.readString();
         dateNaissance = in.readString();
@@ -49,15 +47,15 @@ public class User_Data implements Parcelable {
         return 0;
     }
 
-    public static final Creator<User_Data> CREATOR = new Creator<User_Data>() {
+    public static final Creator<User_Data_Candidat> CREATOR = new Creator<User_Data_Candidat>() {
         @Override
-        public User_Data createFromParcel(Parcel in) {
-            return new User_Data(in);
+        public User_Data_Candidat createFromParcel(Parcel in) {
+            return new User_Data_Candidat(in);
         }
 
         @Override
-        public User_Data[] newArray(int size) {
-            return new User_Data[size];
+        public User_Data_Candidat[] newArray(int size) {
+            return new User_Data_Candidat[size];
         }
     };
 }

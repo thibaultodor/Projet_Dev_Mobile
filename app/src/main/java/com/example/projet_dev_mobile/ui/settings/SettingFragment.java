@@ -1,4 +1,4 @@
-package com.example.projet_dev_mobile.ui.slideshow;
+package com.example.projet_dev_mobile.ui.settings;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

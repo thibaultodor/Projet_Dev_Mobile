@@ -1,9 +1,8 @@
-package com.example.projet_dev_mobile.ui.gallery;
+package com.example.projet_dev_mobile.ui.profil;
 
 import static android.content.Context.MODE_PRIVATE;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,16 +15,9 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 
 import com.example.projet_dev_mobile.R;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
 
 public class ProfilFragment extends Fragment {
 
@@ -37,14 +29,14 @@ public class ProfilFragment extends Fragment {
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("MySharedPref", MODE_PRIVATE);
 
         String json = sharedPreferences.getString("UserJson","");
-        boolean isConnected = sharedPreferences.getBoolean("isConnected",false);
+        int type_of_account = sharedPreferences.getInt("type_of_account",0);
 
-        Toast.makeText(getContext(), String.valueOf(isConnected), Toast.LENGTH_SHORT).show();
-        Toast.makeText(getContext(), json, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getContext(), String.valueOf(isConnected), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getContext(), json, Toast.LENGTH_SHORT).show();
 
         Log.println(Log.DEBUG,"DEBUG",json);
 
-        if(isConnected) {
+        if(type_of_account == 1) {
             try {
                 JSONObject obj = new JSONObject(json);
                 TextView tname = view.findViewById(R.id.user_name);

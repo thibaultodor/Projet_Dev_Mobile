@@ -12,23 +12,34 @@
         android:theme="@style/Theme.Projet_Dev_Mobile"
         tools:targetApi="31">
         <activity
-            android:name=".Home"
+            android:name=".home.Home_Candidat"
             android:exported="true"
             android:label="@string/title_activity_home"
             android:theme="@style/Theme.Projet_Dev_Mobile.NoActionBar">
         </activity>
         <activity
-            android:name=".InscriptionJobSearcher"
+            android:name=".home.Home_Employeur"
+            android:exported="true"
+            android:label="@string/title_activity_home"
+            android:theme="@style/Theme.Projet_Dev_Mobile.NoActionBar">
+        </activity>
+        <activity
+            android:name=".inscription_connexion.InscriptionJobSearcher_part1"
             android:exported="true"
             android:theme="@style/Theme.Projet_Dev_Mobile.NoActionBar">
         </activity>
         <activity
-            android:name=".SecurityCodeSend"
+            android:name=".inscription_connexion.InscriptionJobSearcher_part2"
             android:exported="true"
             android:theme="@style/Theme.Projet_Dev_Mobile.NoActionBar">
         </activity>
         <activity
-            android:name=".ConnectionScreen"
+            android:name=".inscription_connexion.SecurityCodeSend"
+            android:exported="true"
+            android:theme="@style/Theme.Projet_Dev_Mobile.NoActionBar">
+        </activity>
+        <activity
+            android:name=".inscription_connexion.ConnexionScreen"
             android:exported="true"
             android:theme="@style/Theme.Projet_Dev_Mobile.NoActionBar" >
             <intent-filter>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/AppTitle"
+        android:layout_width="413dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="36dp"
+        android:background="#DBD2F3"
+        android:lineSpacingExtra="8sp"
+        android:text="@string/teliod_app"
+        android:textAlignment="viewStart"
+        android:textColor="#A576DD"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck,TextSizeCheck,VisualLintBounds" />
+
+    <TextView
+        android:id="@+id/TitleSecCodeSend"
+        android:layout_width="342dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/inscription"
+        android:textAlignment="textStart"
+        android:textColor="#C6C6C6"
+        android:textSize="60sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AppTitle"
+        tools:ignore="TextSizeCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/retourOffre_inscription"
+        style="@style/Widget.Material3.Button.TextButton.Snackbar"
+        android:layout_width="349dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#CF93E4"
+        android:text="@string/retour_aux_offres"
+        android:textColor="#FEFEFE"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="VisualLintButtonSize,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/inscription_button"
+        style="@style/Widget.Material3.Button.TextButton.Snackbar"
+        android:layout_width="349dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="9dp"
+        android:backgroundTint="#6750A3"
+        android:text="@string/s_inscrire"
+        android:textAlignment="center"
+        android:textColor="#FEFEFE"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/retourOffre_inscription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="VisualLintButtonSize,TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/CommentairesInscriptionJS"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:layout_width="338dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="148dp"
+        android:background="@drawable/rounded_edittext"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:hint="@string/commentaires"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="false"
+        android:textAlignment="viewStart"
+        android:textColorHint="#999999"
+        android:textSize="20sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@+id/inscription_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/signUpInscriptionJS"
+        style="@style/Widget.Material3.Button.TextButton.Snackbar"
+        android:layout_width="338dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="#A0A0A0"
+        android:text="@string/importer_un_cv"
+        android:textAlignment="center"
+        android:textColor="#FEFEFE"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/CommentairesInscriptionJS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="VisualLintButtonSize,TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

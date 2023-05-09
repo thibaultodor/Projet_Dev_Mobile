@@ -1,12 +1,10 @@
-package com.example.projet_dev_mobile;
+package com.example.projet_dev_mobile.home;
 
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
-import android.widget.Toast;
 
+import com.example.projet_dev_mobile.R;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -17,17 +15,17 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.projet_dev_mobile.databinding.ActivityHomeBinding;
+import com.example.projet_dev_mobile.databinding.ActivityHomeCandidatBinding;
 
-public class Home extends AppCompatActivity {
+public class Home_Candidat extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-    private ActivityHomeBinding binding;
+    private ActivityHomeCandidatBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityHomeBinding.inflate(getLayoutInflater());
+        binding = ActivityHomeCandidatBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarHome.toolbar);

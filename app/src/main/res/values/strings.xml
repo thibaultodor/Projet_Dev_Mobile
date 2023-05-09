@@ -33,4 +33,11 @@
     <string name="menu_accueil">Accueil</string>
     <string name="menu_profil">Profil</string>
     <string name="menu_settings">Paramètres</string>
+    <string name="candidatures">Candidatures</string>
+    <string name="suivant">Suivant</string>
+    <string name="candidat">Candidat</string>
+    <string name="employeur">Employeur</string>
+    <string name="agence_d_int_rim">Agence d\'intérim</string>
+    <string name="gestionnaire">Gestionnaire</string>
+    <string name="ok">OK</string>
 </resources>
