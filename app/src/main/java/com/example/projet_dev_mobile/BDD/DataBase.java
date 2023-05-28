@@ -279,6 +279,36 @@ public class DataBase
         return isExist;
     }
 
+    public int isExistNewMessage(Context context, String prenom,String nom){
+        SharedPreferences sharedPreferences = context.getSharedPreferences("MySharedPref", MODE_PRIVATE);
+        String json = sharedPreferences.getString("Users","");
+        int isExistid = -1;
+        if(json.isEmpty()){
+            Log.println(Log.ERROR,"DataBase","NO Users in JSON !!!!!!!!!!!!!!!!!!!!!!!!!!");
+        }
+        else{
+            try {
+                JSONObject obj = new JSONObject(json);
+                JSONArray listUsers = obj.getJSONArray("users");
+                for (int i = 0; i < listUsers.length(); i++) {
+                    JSONObject user = listUsers.getJSONObject(i);
+
+                    String id = user.getString("id");
+                    String pren = user.getString("prenom");
+                    String no = user.getString("nom");
+                    if(pren.equalsIgnoreCase(prenom)){
+                        if(no.equalsIgnoreCase(nom)){
+                            isExistid = Integer.parseInt(id);
+                        }
+                    }
+                }
+            } catch (JSONException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        return isExistid;
+    }
+
     static public class Employer
 {
     private static Employer Employers;

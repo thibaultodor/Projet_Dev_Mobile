@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.projet_dev_mobile.BDD.DataBase;
 import com.example.projet_dev_mobile.BDD.Offre;
 import com.example.projet_dev_mobile.BDD.SavedCardItem;
 import com.example.projet_dev_mobile.R;
@@ -30,9 +31,14 @@ public class SavedOffresFragment extends Fragment {
 
         List<CardItem> cardItemList = new ArrayList<>();
 
-        SavedCardItem savedCardItem = new SavedCardItem();
+        for (int i = 0; DataBase.Offer.getOffers().get(i) != null; i++)
+        {
+            String[] data = DataBase.Offer.getOffers().get(i);
+            cardItemList.add(new CardItem(R.drawable.bear,data[DataBase.Offer.NOM],data[DataBase.Offer.URL]));
+        }
 
-        cardItemList.addAll(savedCardItem.getListSavedCard());
+        cardItemList.remove(0);
+        cardItemList.remove(0);
 
         //BDD_Offres b = new BDD_Offres();
 

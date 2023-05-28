@@ -96,7 +96,7 @@ public class ProfilFragment extends Fragment {
             Button change_mdp = view.findViewById(R.id.change_mdp);
             change_mdp.setOnClickListener(v -> {
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
-                alertDialog.setTitle("Values");
+                alertDialog.setTitle("Changer de mot de passe ?");
                 final EditText oldPass = new EditText(getActivity());
                 final EditText newPass = new EditText(getActivity());
                 final EditText confirmPass = new EditText(getActivity());
@@ -106,16 +106,16 @@ public class ProfilFragment extends Fragment {
                 newPass.setTransformationMethod(PasswordTransformationMethod.getInstance());
                 confirmPass.setTransformationMethod(PasswordTransformationMethod.getInstance());
 
-                oldPass.setHint("Old Password");
-                newPass.setHint("New Password");
-                confirmPass.setHint("Confirm Password");
+                oldPass.setHint("Ancien mot de passe");
+                newPass.setHint("Nouveau mot de passe");
+                confirmPass.setHint("Confirmation du nouveau mot de passe");
                 LinearLayout ll=new LinearLayout(getActivity());
                 ll.setOrientation(LinearLayout.VERTICAL);
                 ll.addView(oldPass);
                 ll.addView(newPass);
                 ll.addView(confirmPass);
                 alertDialog.setView(ll);
-                alertDialog.setPositiveButton("Yes",
+                alertDialog.setPositiveButton("Oui",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
 
@@ -133,7 +133,7 @@ public class ProfilFragment extends Fragment {
                                 dialog.cancel();
                             }
                         });
-                alertDialog.setNegativeButton("No",
+                alertDialog.setNegativeButton("Non",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
                                 Toast.makeText(getContext(), "Mot de passe de non modifié", Toast.LENGTH_SHORT).show();
