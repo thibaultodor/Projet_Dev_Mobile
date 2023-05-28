@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@id/nav_home">
 
     <fragment
         android:id="@+id/nav_home"
@@ -28,4 +28,21 @@
         android:name="com.example.projet_dev_mobile.ui.candidatures.CandidatureFragement"
         android:label="@string/candidatures"
         tools:layout="@layout/fragment_candidatures" />
+    <fragment
+        android:id="@+id/nav_connection"
+        android:name="com.example.projet_dev_mobile.ui.connect.ConnectionFragement"
+        android:label="@string/Connection"
+        tools:layout="@layout/fragment_connect" />
+
+    <fragment
+        android:id="@+id/nav_chat"
+        android:name="com.example.projet_dev_mobile.ui.chat.ContactListFragment"
+        android:label="Chat"
+        tools:layout="@layout/fragment_candidatures" />
+
+    <fragment
+        android:id="@+id/nav_saved"
+        android:name="com.example.projet_dev_mobile.ui.savedOffre.SavedOffresFragment"
+        android:label="SavedOffre"
+        tools:layout="@layout/fragment_savedoffres" />
 </navigation>

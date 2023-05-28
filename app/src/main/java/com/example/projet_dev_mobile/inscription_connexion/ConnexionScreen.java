@@ -7,11 +7,14 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.projet_dev_mobile.BDD.DataBase;
 import com.example.projet_dev_mobile.R;
+import com.example.projet_dev_mobile.home.Home_Anonyme;
 import com.example.projet_dev_mobile.home.Home_Candidat;
 import com.example.projet_dev_mobile.home.Home_Employeur;
 
@@ -21,6 +24,27 @@ public class ConnexionScreen extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE);
         int type_of_account = sharedPreferences.getInt("type_of_account", 0);
 
+        DataBase d = DataBase.getInstance();
+
+        d.reBaseBDDUser(getApplicationContext());
+        d.reBaseBDDConversation(getApplicationContext());
+        d.reBaseBDDOffres(getApplicationContext());
+        if(d.isEmpty()){
+            d.setJsonUsersTest(getApplicationContext());
+            d.setJsonConversationTest(getApplicationContext());
+            d.setJsonOfferTest(getApplicationContext());
+            d.reBaseBDDUser(getApplicationContext());
+            d.reBaseBDDConversation(getApplicationContext());
+            d.reBaseBDDOffres(getApplicationContext());
+        }
+
+        //d.setJson(getApplicationContext());
+        //d.setJsonConversation(getApplicationContext());
+        //d.setJSonConversation(getApplicationContext());
+        //d.setJsonUsers(getApplicationContext());
+
+        //String json = sharedPreferences.getString("Conversations","");
+        //Log.println(Log.ERROR,"DataBase",json);
         //Toast.makeText(this, String.valueOf(type_of_account), Toast.LENGTH_SHORT).show();
 
         if(type_of_account == 1){
@@ -39,7 +63,7 @@ public class ConnexionScreen extends AppCompatActivity {
 
         Button bretour = findViewById(R.id.retourOffre_connexion);
         bretour.setOnClickListener(view -> {
-            Intent myIntent = new Intent(this, Home_Candidat.class);
+            Intent myIntent = new Intent(this, Home_Anonyme.class);
             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(myIntent);
         });
@@ -49,17 +73,35 @@ public class ConnexionScreen extends AppCompatActivity {
             //myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             //startActivity(myIntent);
 
+            TextView tnummail = findViewById(R.id.mail_numtel);
+            TextView mdp = findViewById(R.id.mdp_connect);
+
             ///// HERE CHECK USER EXIST IN DATABASE /////
-            boolean isExist = false;
+            boolean isExist = d.isExist(getApplicationContext(),tnummail.getText().toString(),mdp.getText().toString());
             /////////////////////////////////////////////
 
+            //Log.println(Log.ERROR,"DataBase", DataBase.User.getUsers().toJSON());
             if(isExist) {
+                String[] data = DataBase.User.getUsers().get(DataBase.User.MAIL,tnummail.getText().toString());
+                //Log.println(Log.ERROR,"DataBase", Arrays.toString(data));
+                int id = Integer.parseInt(data[DataBase.User.ID]);
+
                 SharedPreferences.Editor editor = sharedPreferences.edit();
 
                 ////// En fonction du type de compte value différente //////
                 editor.putInt("type_of_account", 1);
                 ////////////////////////////////////////////////////////////
                 editor.apply();
+
+                editor.putInt("idUser",id);
+                editor.apply();
+
+                Intent myIntent = new Intent(this, Home_Candidat.class);
+                myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(myIntent);
+            }
+            else{
+                Toast.makeText(this, "Identifiant ou mot de passe inconnu", Toast.LENGTH_SHORT).show();
             }
 
         });

@@ -79,13 +79,15 @@ public class InscriptionJobSearcher_part1 extends AppCompatActivity {
                 }
                 if (allfill) {
                     Intent myIntent = new Intent(this, InscriptionJobSearcher_part2.class);
-                    User_Data_Candidat user = new User_Data_Candidat(nom.getText().toString(),
+                    User_Data_Candidat user = new User_Data_Candidat(
+                            nom.getText().toString(),
                             prenom.getText().toString(),
                             nationalite.getText().toString(),
                             datenaissance.getText().toString(),
                             telephone.getText().toString(),
                             email.getText().toString(),
-                            ville.getText().toString());
+                            ville.getText().toString(),
+                            "123456","","");
                     myIntent.putExtra("user", user);
                     myIntent.putExtra("choice_account", choice);
                     startActivity(myIntent);

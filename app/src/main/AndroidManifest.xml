@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -10,36 +18,62 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Projet_Dev_Mobile"
+        android:screenOrientation="portrait"
         tools:targetApi="31">
         <activity
             android:name=".home.Home_Candidat"
+            android:screenOrientation="portrait"
             android:exported="true"
             android:label="@string/title_activity_home"
             android:theme="@style/Theme.Projet_Dev_Mobile.NoActionBar">
         </activity>
         <activity
             android:name=".home.Home_Employeur"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:label="@string/title_activity_home"
+            android:theme="@style/Theme.Projet_Dev_Mobile.NoActionBar">
+        </activity>
+        <activity
+            android:name=".home.Home_Anonyme"
+            android:screenOrientation="portrait"
             android:exported="true"
             android:label="@string/title_activity_home"
             android:theme="@style/Theme.Projet_Dev_Mobile.NoActionBar">
         </activity>
         <activity
             android:name=".inscription_connexion.InscriptionJobSearcher_part1"
+            android:screenOrientation="portrait"
             android:exported="true"
             android:theme="@style/Theme.Projet_Dev_Mobile.NoActionBar">
         </activity>
         <activity
             android:name=".inscription_connexion.InscriptionJobSearcher_part2"
+            android:screenOrientation="portrait"
             android:exported="true"
             android:theme="@style/Theme.Projet_Dev_Mobile.NoActionBar">
         </activity>
         <activity
             android:name=".inscription_connexion.SecurityCodeSend"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/Theme.Projet_Dev_Mobile.NoActionBar">
+        </activity>
+        <activity
+            android:name=".ui.chat.ChatActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/Theme.Projet_Dev_Mobile.NoActionBar">
+        </activity>
+        <activity
+            android:name=".pdfTest.Pdf"
+            android:screenOrientation="portrait"
             android:exported="true"
             android:theme="@style/Theme.Projet_Dev_Mobile.NoActionBar">
         </activity>
         <activity
             android:name=".inscription_connexion.ConnexionScreen"
+            android:screenOrientation="portrait"
             android:exported="true"
             android:theme="@style/Theme.Projet_Dev_Mobile.NoActionBar" >
             <intent-filter>

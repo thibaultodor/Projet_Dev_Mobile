@@ -13,8 +13,17 @@
             android:icon="@drawable/baseline_person_24"
             android:title="@string/menu_profil" />
         <item
+            android:id="@+id/nav_chat"
+            android:icon="@drawable/baseline_chat_24"
+            android:title="@string/messages" />
+        <item
+            android:id="@+id/nav_saved"
+            android:icon="@drawable/baseline_favorite_24"
+            android:title="@string/favorites" />
+        <item
             android:id="@+id/nav_setting"
             android:icon="@drawable/baseline_settings_24"
             android:title="@string/menu_settings" />
+
     </group>
 </menu>

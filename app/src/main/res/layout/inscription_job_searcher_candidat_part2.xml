@@ -67,7 +67,7 @@
         tools:ignore="VisualLintButtonSize,TextContrastCheck" />
 
     <EditText
-        android:id="@+id/CommentairesInscriptionJS"
+        android:id="@+id/commentaire_inscription"
         style="@style/Widget.AppCompat.AutoCompleteTextView"
         android:layout_width="338dp"
         android:layout_height="200dp"
@@ -82,6 +82,7 @@
         android:paddingRight="10dp"
         android:singleLine="false"
         android:textAlignment="viewStart"
+        android:textColor="@color/black"
         android:textColorHint="#999999"
         android:textSize="20sp"
         android:typeface="normal"
@@ -91,7 +92,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/signUpInscriptionJS"
+        android:id="@+id/cv_button"
         style="@style/Widget.Material3.Button.TextButton.Snackbar"
         android:layout_width="338dp"
         android:layout_height="48dp"
@@ -101,7 +102,7 @@
         android:textAlignment="center"
         android:textColor="#FEFEFE"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/CommentairesInscriptionJS"
+        app:layout_constraintBottom_toTopOf="@+id/commentaire_inscription"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"

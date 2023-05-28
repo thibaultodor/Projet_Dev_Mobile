@@ -24,11 +24,6 @@
     <string name="no_sec_cod">Vous n\'avez pas reçu de <b>code</b> ?</string>
     <string name="renvoyer_code">Renvoyer</string>
     <string name="title_activity_home">Home</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="menu_accueil">Accueil</string>
     <string name="menu_profil">Profil</string>
@@ -40,4 +35,10 @@
     <string name="agence_d_int_rim">Agence d\'intérim</string>
     <string name="gestionnaire">Gestionnaire</string>
     <string name="ok">OK</string>
+    <string name="Connection">Connection</string>
+    <string name="messages">Messages</string>
+    <string name="favorites">Favorites</string>
+    <string name="deconnect">Se déconnecter</string>
+    <string name="voir_cv">Voir CV</string>
+    <string name="selectionner_la_langue_de_traduction">Selectionner la langue de traduction</string>
 </resources>

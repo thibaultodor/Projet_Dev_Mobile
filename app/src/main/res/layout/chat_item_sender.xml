@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:maxWidth="100sp"
+    android:orientation="vertical"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <TextView
+        android:id="@+id/chatText_sender"
+        android:layout_width="wrap_content"
+        android:maxWidth="250sp"
+        android:layout_height="wrap_content"
+
+
+        android:background="@drawable/rounded_edittext_home"
+        android:backgroundTint="#6750A3"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="wrap_content"
+        android:layout_height="10sp" />
+
+</LinearLayout>
